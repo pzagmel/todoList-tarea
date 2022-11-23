@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 //create your first component
 const Home = () => {
-  const [tareas, nueva] = useState([
+  const [tareas, setTareas] = useState([
     "Make the bed",
     "Eat",
     "Walk the dog",
@@ -16,7 +16,7 @@ const Home = () => {
         placeholder="What needs to be done"
         onKeyPress={(e) => {
           if (e.key === "Enter") {
-            nueva([...tareas, e.target.value]);
+            setTareas([...tareas, e.target.value]);
             e.target.value = "";
           }
         }}
@@ -29,13 +29,13 @@ const Home = () => {
             <i
               className="fas fa-times float-end my-1 mx-1"
               onClick={() =>
-                nueva(tareas.filter((value, i) => index != i))
+                setTareas(tareas.filter((value, i) => index != i))
               }
             ></i>
           </li>
         );
     })}
-    <div className ="left mx"> {tareas.length} Item left </div>
+    <div className ="left"> {tareas.length} Item left </div>
       </ul>
     </div>
   );
