@@ -7,7 +7,6 @@ const Home = () => {
     "Eat",
     "Walk the dog",
   ]);
-  const [input, setInput] = useState("");
   return (
     <div className="container">
       <h1> Todo List</h1>
@@ -30,7 +29,7 @@ const Home = () => {
             <i
               className="fas fa-times float-end my-1 mx-1"
               onClick={() =>
-                nueva(tareas.filter((target, Index) => index != Index))
+                nueva(tareas.filter((value, i) => index != i))
               }
             ></i>
           </li>
