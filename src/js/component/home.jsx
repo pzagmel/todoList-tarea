@@ -6,6 +6,7 @@ const Home = () => {
     "Make the bed",
     "Eat",
     "Walk the dog",
+    "pay the tax"
   ]);
   return (
     <div className="container">
